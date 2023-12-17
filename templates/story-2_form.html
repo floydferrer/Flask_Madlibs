@@ -6,7 +6,7 @@
     {% for prompt in prompts %}
         <p>
         {{ prompt }}:
-        <input name="{{ prompt }}">
+        <input name="{{ prompt }}" required>
         </p>    
     {% endfor %}
     <button>Submit</button>
