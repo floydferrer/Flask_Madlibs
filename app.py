@@ -5,6 +5,11 @@ from stories import story1, story2
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = -1
+if __name__ == '__main__':
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(debug=True, host='0.0.0.0')
+
 
 debug = DebugToolbarExtension(app)
 
